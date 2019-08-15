@@ -1,0 +1,3 @@
+.ng-invalid + label:after {
+  content: "<--Pick one";
+}
