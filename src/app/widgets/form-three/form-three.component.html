@@ -1,6 +1,6 @@
 <form #formRef="ngForm" (ngSubmit)="onSubmit(formRef.value)">
   <fieldset ngModelGroup="login">
-    <input type="text" name="username" [(ngModel)]="username" />
+    <input type="text" name="username" [(ngModel)]="username" required />
     <input type="password" name="password" [(ngModel)]="password" />
   </fieldset>
   <button type="submit">Submit</button>

@@ -6,6 +6,8 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./form-three.component.css"]
 })
 export class FormThreeComponent implements OnInit {
+  username = "alex fan";
+
   constructor() {}
 
   ngOnInit() {}
