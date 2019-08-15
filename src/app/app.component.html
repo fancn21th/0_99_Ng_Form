@@ -1,0 +1,4 @@
+<input type="text" [(ngModel)]="username" required #usernameRef="ngModel" />
+<div *ngIf="usernameRef.errors?.required">This filed is required</div>
+<span>{{ "this filed is valid:" + usernameRef.valid }}</span>
+<span>{{ "this filed has errors:" + usernameRef.errors | json }}</span>
