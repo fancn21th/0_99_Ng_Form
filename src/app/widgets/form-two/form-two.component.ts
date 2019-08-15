@@ -10,4 +10,8 @@ export class FormTwoComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  onSubmit(formValue) {
+    console.log(formValue);
+  }
 }

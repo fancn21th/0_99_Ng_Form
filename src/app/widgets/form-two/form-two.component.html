@@ -1,4 +1,4 @@
-<form #formRef="ngForm">
+<form #formRef="ngForm" (ngSubmit)="onSubmit(formRef.value)">
   <input
     name="username"
     type="text"
@@ -15,6 +15,8 @@
   </div>
   <span>{{ "this filed is valid:" + usernameRef.valid }}</span>
   <span>{{ "this filed has errors:" + (usernameRef.errors | json) }}</span>
+
+  <button type="submit">Submit</button>
 </form>
 <span>{{ formRef.value | json }}</span>
 <span>{{ formRef.valid | json }}</span>
