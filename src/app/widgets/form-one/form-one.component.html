@@ -1,0 +1,15 @@
+<input
+  type="text"
+  [(ngModel)]="username"
+  required
+  #usernameRef="ngModel"
+  minlength="3"
+/>
+<div *ngIf="usernameRef.errors?.required">This filed is required</div>
+<div *ngIf="usernameRef.errors?.minlength">
+  This filed must be longer than
+  {{ usernameRef.errors?.minlength.requiredLength }} characters. You only type
+  {{ usernameRef.errors?.minlength.actualLength }} characters
+</div>
+<span>{{ "this filed is valid:" + usernameRef.valid }}</span>
+<span>{{ "this filed has errors:" + (usernameRef.errors | json) }}</span>
