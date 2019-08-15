@@ -1,6 +1,21 @@
 <form #formRef="ngForm" (ngSubmit)="onSubmit(formRef.value)">
   <fieldset ngModelGroup="login">
-    <input type="text" name="username" [(ngModel)]="username" required />
+    <input
+      #usernameRef="ngModel"
+      type="text"
+      name="username"
+      [(ngModel)]="username"
+      required
+    />
+    <hr />
+    pristine: {{ usernameRef.pristine }}
+    <hr />
+    dirty: {{ usernameRef.dirty }}
+    <hr />
+    untouched: {{ usernameRef.untouched }}
+    <hr />
+    touched: {{ usernameRef.touched }}
+    <hr />
     <input type="password" name="password" [(ngModel)]="password" />
   </fieldset>
   <button type="submit">Submit</button>
