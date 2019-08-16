@@ -1,1 +1,8 @@
-<p>form-five works!</p>
+<form #formRef="ngForm">
+  <select name="location" ngModel>
+    <option *ngFor="let location of locations" [value]="location">{{
+      location
+    }}</option>
+  </select>
+</form>
+{{ formRef.value | json }}

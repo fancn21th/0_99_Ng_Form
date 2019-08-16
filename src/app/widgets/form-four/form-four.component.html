@@ -11,7 +11,7 @@
     <label [attr.for]="location">{{ location }}</label>
   </div>
 </form>
-{{ formRef.value | json }}
+selected : {{ selectedLocation }}
 <hr />
-{{ selectedLocation }}
+{{ formRef.value | json }}
 <button (click)="onClick()">Clear</button>

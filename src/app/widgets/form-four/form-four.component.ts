@@ -7,7 +7,7 @@ import { Component, OnInit } from "@angular/core";
 })
 export class FormFourComponent implements OnInit {
   locations: string[] = ["Home", "Away", "Space"];
-  selectedLocation: null;
+  selectedLocation;
 
   constructor() {}
 
